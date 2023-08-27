@@ -1,0 +1,6 @@
+openai
+langchain
+pypdf
+pinecone-client
+tiktoken
+python-dotenv

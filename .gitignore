@@ -1,0 +1,5 @@
+.env
+pdf/*
+.tool*
+*.pyc
+.DS_Store
