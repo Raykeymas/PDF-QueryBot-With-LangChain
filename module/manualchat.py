@@ -28,5 +28,5 @@ class ManualChat:
         dict: チャットボットの応答を含むdict
     """
     result = self.qa({"question": question, "chat_history": self.chat_history})
-    self.chat_history.append(result["answer"])
+    self.chat_history.append((question, result["answer"]))
     return result
