@@ -27,10 +27,7 @@ def insert_pdf(path: str):
 
 def ask(question: str):
   result = manualchat.ask(question)
-  print("回答:")
-  print(result["answer"])
-  # print("___参考___")
-  # print(result['source_documents'])
+  return result["answer"]
 
 
 if __name__ == "__main__":
@@ -44,7 +41,8 @@ if __name__ == "__main__":
     for file in os.listdir("./pdf"):
       if file.endswith(".pdf"):
         print(f"insert {file}")
-        insert_pdf("./pdf/" + file, vectorstore)
+        insert_pdf("./pdf/" + file)
+      break
 
   # チャットボットに質問する
   if args.question:
